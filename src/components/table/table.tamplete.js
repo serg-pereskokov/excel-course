@@ -58,7 +58,6 @@ export function createTable(rowsCount = 15) {
     for (let row = 0; row < rowsCount; row++) {
         const cell = new Array(colsCount)
             .fill('')
-            // .map((_, col) => toCell(col, row + 1))
             .map(toCell(row))
             .join('')
 
