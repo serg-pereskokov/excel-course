@@ -20,7 +20,7 @@ export const resizeHandler = (event, $root) => {
         } else {
             delta = e.pageY - coords.bottom
             value = coords.height + delta
-            $resizer.css({bottom: -delta + 'px', right: '-5000px'})
+            $resizer.css({bottom: -delta + 40 + 'px', right: '-5000px'})
         }
     }
 
