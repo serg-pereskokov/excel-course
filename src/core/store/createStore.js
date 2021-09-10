@@ -35,10 +35,11 @@ export class Store {
             this.listeners = this.listeners.filter(listener => listener !== fn)
         }
     }
-
     dispatch(action) {
         this.state = this.rootReducer(this.state, action)
-        this.listeners.forEach(listener => listener(this.state))
+        this.listeners.forEach(listener => {
+            if (listener) listener(this.state)
+        })
     }
 
     getState() {
