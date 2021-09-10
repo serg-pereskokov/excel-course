@@ -1,4 +1,5 @@
 import {defaultStyles, defaultTitle} from '../constans'
+import {clone} from '../core/utils'
 
 const defaultState = {
     title: defaultTitle,
@@ -18,5 +19,5 @@ const normalize = state => ({
 })
 
 export const normolizeInitialState = state => {
-    return state ? normalize(state) : defaultState
+    return state ? normalize(state) : clone(defaultState)
 }
